@@ -80,6 +80,7 @@ body {
 }
 /*single input block*/
 .single-input {
+  position: relative;
 }
 .single-input__title {
   color: var(--color-cyan-one);
@@ -131,6 +132,23 @@ body {
 }
 .single-input__input:focus {
   border: 0.2rem solid var(--color-cyan);
+}
+.single-input__input--alert {
+  border: 0.2rem solid #db8064;
+}
+.single-input__text-alert {
+  visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  color: #db8064;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.single-input__text-alert--active {
+  visibility: visible;
 }
 .single-input__icon {
   position: absolute;
@@ -204,6 +222,9 @@ body {
 .tip-grid__text-option-tip::-ms-input-placeholder {
   /* Microsoft Edge */
   color: var(--color-cyan-one);
+}
+.tip-grid__text-option-tip:focus {
+  border: 0.2rem solid var(--color-cyan);
 }
 /*outputs section*/
 .calculator__outputs {
@@ -327,6 +348,10 @@ body {
   .single-input__input {
     padding: 1rem 3rem;
     font-size: 3.6rem;
+  }
+  .single-input__text-alert {
+    font-size: 2.4rem;
+    position: relative;
   }
   .single-input__icon {
     width: 1.6rem;
