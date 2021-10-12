@@ -49,6 +49,7 @@ body {
 }
 .tip-calculator__logo {
   display: block;
+  width: 10rem;
 
   margin: auto;
 }
@@ -295,6 +296,12 @@ body {
 }
 .output-amount__reset--active {
   background-color: var(--color-cyan);
+}
+@media screen and (min-width: 1700px) {
+  /*component*/
+  html {
+    font-size: 72.5%;
+  }
 }
 @media screen and (max-width: 800px) {
   /*component*/
