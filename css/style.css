@@ -40,6 +40,8 @@ body {
 .tip-calculator {
   display: flex;
   flex-direction: column;
+
+  padding: 4rem 0;
 }
 /*logo section*/
 .tip-calculator__box-logo {
@@ -168,7 +170,7 @@ body {
   padding: 0.5rem 0;
 
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
 }
 .tip-grid__option-tip:hover {
   background-color: var(--color-cyan-three);
@@ -187,8 +189,21 @@ body {
   padding: 0.5rem 1rem;
 
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   outline: none;
+}
+.tip-grid__text-option-tip::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-cyan-one);
+  opacity: 1; /* Firefox */
+}
+.tip-grid__text-option-tip:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--color-cyan-one);
+}
+.tip-grid__text-option-tip::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--color-cyan-one);
 }
 /*outputs section*/
 .calculator__outputs {
@@ -199,7 +214,7 @@ body {
 
   align-items: flex-start;
 
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 .calculator__box-content {
   position: relative;
@@ -252,13 +267,19 @@ body {
   font-size: 2rem;
 
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
 }
 .output-amount__reset:active {
   background-color: var(--color-cyan-three);
 }
 .output-amount__reset--active {
   background-color: var(--color-cyan);
+}
+@media screen and (max-width: 800px) {
+  /*component*/
+  html {
+    font-size: 52.5%;
+  }
 }
 @media screen and (max-width: 768px) {
   /*component*/
@@ -271,12 +292,16 @@ body {
   html {
     font-size: 62.5%;
   }
+  /*component*/
+  .tip-calculator {
+    padding: 0;
+  }
   /*logo section*/
   .tip-calculator__box-logo {
-    padding: 6rem 0;
+    padding: 8rem 0;
   }
   .tip-calculator__logo {
-    width: 10rem;
+    width: 14rem;
   }
   /*calculator section*/
   .tip-calculator__box-calculator {
@@ -285,9 +310,9 @@ body {
   /*calculator block*/
   .calculator {
     flex-direction: column;
-
-    max-width: 90rem;
     width: 100%;
+
+    padding: 4rem;
   }
   /*inputs section*/
   .calculator__inputs {
@@ -297,36 +322,58 @@ body {
   }
   /*single input block*/
   .single-input__title {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
   }
-  /*complex input block*/
-  .complex-input__title {
-    font-size: 1.8rem;
+  .single-input__input {
+    padding: 1rem 3rem;
+    font-size: 3.6rem;
   }
-  /*outputs section*/
-  .calculator__outputs {
-    flex: 0 1 100%;
-
-    padding: 2rem;
-
-    margin-top: 4rem;
-  }
-  .calculator__box-content {
-    padding-top: 2rem;
-    padding-bottom: 8rem;
+  .single-input__icon {
+    width: 1.6rem;
   }
   /*complex input block*/
   .tip-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
 
-    grid-gap: 2rem;
+    grid-gap: 2.5rem;
   }
   .tip-grid__option-tip {
     padding: 1rem 1rem;
+    font-size: 3.6rem;
   }
   .tip-grid__text-option-tip {
     padding: 1rem 1rem;
+    font-size: 3.6rem;
+  }
+  /*complex input block*/
+  .complex-input__title {
+    font-size: 2.4rem;
+  }
+  /*outputs section*/
+  .calculator__outputs {
+    flex: 0 1 100%;
+
+    padding: 4rem;
+
+    margin-top: 4rem;
+  }
+  .calculator__box-content {
+    padding-top: 2rem;
+    padding-bottom: 14rem;
+  }
+  .output-amount__title {
+    font-size: 2.4rem;
+  }
+  .output-amount__text {
+    font-size: 2rem;
+  }
+  .output-amount__amount {
+    font-size: 4.2rem;
+  }
+  .output-amount__reset {
+    padding: 2rem 0;
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 540px) {
@@ -335,33 +382,33 @@ body {
     font-size: 74.5%;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 426px) {
   /*component*/
   html {
-    font-size: 60.5%;
+    font-size: 45.5%;
   }
 }
 @media screen and (max-width: 376px) {
   /*component*/
   html {
-    font-size: 56.5%;
+    font-size: 40.5%;
   }
 }
 @media screen and (max-width: 360px) {
   /*component*/
   html {
-    font-size: 54.5%;
+    font-size: 39.5%;
   }
 }
 @media screen and (max-width: 320px) {
   /*component*/
   html {
-    font-size: 48.5%;
+    font-size: 35.5%;
   }
 }
 @media screen and (max-width: 280px) {
   /*component*/
   html {
-    font-size: 42.5%;
+    font-size: 30.5%;
   }
 }
